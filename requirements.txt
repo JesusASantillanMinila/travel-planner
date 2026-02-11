@@ -1,1 +1,6 @@
-streamlit
+streamlit 
+google-generativeai 
+requests 
+streamlit-folium 
+folium 
+streamlit-searchbox
