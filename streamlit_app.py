@@ -63,7 +63,7 @@ with st.sidebar:
         placeholder="Search for a city (e.g. London)..."
     )
     
-    duration = st.slider("Duration (Days)", 1, 7, 3)
+    duration = st.slider("Number of stops", 1, 7, 3)
     interests = st.text_input("Interests", "Historical sites and local food")
     
     generate_btn = st.button("Generate Smart Route", type="primary")
@@ -76,7 +76,7 @@ if generate_btn and selected_city_data:
     with st.spinner(f"AI is planning your trip to {city_name}..."):
         # Gemini Prompt with specific JSON instructions
         prompt = f"""
-        Suggest 3 specific places/attractions for a {duration}-day trip to {city_name} focused on {interests}.
+        Suggest {duration} specific places/attractions for a trip to {city_name} focused on {interests}.
         Return the result as a JSON list of objects.
         Each object must have 'name', 'lat', and 'lon'.
         Example: [{{'name': 'Place A', 'lat': 12.34, 'lon': 56.78}}]
