@@ -11,7 +11,7 @@ GEMINI_KEY = st.secrets["GEMINI_KEY"]
 GEOAPIFY_KEY = st.secrets["GEOAPIFY_KEY"]
 
 genai.configure(api_key=GEMINI_KEY)
-model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel('gemini-2.5-flash')
 
 st.set_page_config(page_title="AI Route Planner", layout="wide")
 
