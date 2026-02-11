@@ -55,7 +55,7 @@ if generate_btn and selected_city_data:
     prompt = f"""
     Suggest 3 specific places for a {duration}-day trip to {city_name} focused on {interests}.
     Return ONLY a Python list of dictionaries with 'name' and approximate 'lat', 'lon'.
-    Example: [{'name': 'Eiffel Tower', 'lat': 48.8584, 'lon': 2.2945}]
+    Example: [{{'name': 'Eiffel Tower', 'lat': 48.8584, 'lon': 2.2945}}]
     """
     
     with st.spinner("AI is scouting locations..."):
